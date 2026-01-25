@@ -23,6 +23,17 @@ main() {
 	echo "${my_array[@]:4}"
 
 	echo "${my_array[@]:2:3}"
+
+	#Updaing the array.
+	my_array+=( 10 11 12 13 14 15 )
+
+	echo "${my_array[@]}"
+
+	#Array that stores key value pair.
+	declare -A array_key_value
+	array_key_value=( [name]="Ashutosh Shukla" [age]=20 )
+
+	echo "My name is ${array_key_value[name]}, age is ${array_key_value[age]}" 
 }
 
 main "$@"
