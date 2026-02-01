@@ -1,11 +1,11 @@
-# 📘 Day X – Bash Loops (`loops.sh`) – Complete Notes
+# Bash For Loops
 
 This document provides a **step-by-step explanation** of the Bash script that demonstrates **different types of loops** commonly used in shell scripting.
 Each section directly maps to the actual code in the script.
 
 ---
 
-## 1️⃣ Shebang Line
+## Shebang Line
 
 ```bash
 #!/usr/bin/env bash
@@ -18,7 +18,7 @@ Each section directly maps to the actual code in the script.
 
 ---
 
-## 2️⃣ Enabling Strict / Safe Bash Mode
+## Enabling Strict / Safe Bash Mode
 
 ```bash
 set -euo pipefail
@@ -36,7 +36,7 @@ This prevents silent failures and forces defensive scripting.
 
 ---
 
-## 3️⃣ `main()` Function
+## `main()` Function
 
 ```bash
 main() {
@@ -53,7 +53,7 @@ main() {
 
 ---
 
-## 4️⃣ Looping Over Numbers (Brace Expansion)
+## Looping Over Numbers (Brace Expansion)
 
 ```bash
 echo "========== 1. Numbers (brace expansion) ============"
@@ -69,13 +69,13 @@ done
 * `for i in ...` iterates over each value
 * `$i` holds the current iteration value
 
-📌 **Important:**
+**Important:**
 
 * Brace expansion works only with literal ranges (not variables)
 
 ---
 
-## 5️⃣ Looping Over Script Arguments
+## Looping Over Script Arguments
 
 ```bash
 echo "========= 2. Script arguments =================="
@@ -107,7 +107,7 @@ fi
 
 ---
 
-## 6️⃣ Looping Over Files in a Directory
+## Looping Over Files in a Directory
 
 ```bash
 echo "========= 3. File loop section =============="
@@ -123,13 +123,13 @@ done
 * `[ -e "$file" ]` checks if the file exists
 * `|| continue` skips the loop if no `.sh` files are found
 
-📌 **Why this check matters:**
+**Why this check matters:**
 
 * Prevents printing literal `*.sh` when no files match
 
 ---
 
-## 7️⃣ Looping Over an Array
+## Looping Over an Array
 
 ```bash
 echo "========== 4. Array loop ==============="
@@ -145,7 +145,7 @@ done
 * `"${fruits[@]}"` expands each element safely
 * Loop iterates once per array element
 
-📌 **Best Practice:**
+**Best Practice:**
 
 * Always quote array expansions to avoid word splitting bugs
 
@@ -165,7 +165,7 @@ main "$@"
 
 ---
 
-## 🔑 Summary
+## Summary
 
 This script demonstrates:
 
@@ -177,4 +177,3 @@ This script demonstrates:
 * Safe scripting with `set -euo pipefail`
 
 This is a **foundational loop reference** for Bash scripting.
-
